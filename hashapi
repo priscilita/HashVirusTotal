@@ -37,14 +37,14 @@ for url in lista_limpia[0:10]:
 	
 	print(tipo)
 	if tipo == 'hash':
-		params = {'apikey': 'c1a19808529d6a5b82b346a704ac1094488188b52fbe0b693a802d2fdc2d58ea', 'resource': info}
+		params = {'apikey': '', 'resource': info}
 		response = requests.get(api, params=params)
 	#	print (response.json())
 		print(response.json()['md5'])
 		print(response.json()['positives'])
 	if tipo == 'url':
 		info = url.replace('hxxp','http')
-		params = {'apikey': 'c1a19808529d6a5b82b346a704ac1094488188b52fbe0b693a802d2fdc2d58ea', 'resource': info}
+		params = {'apikey': '', 'resource': info}
 		response = requests.get(api, params=params)
 		#print(response.json()['md5'])
 		#print(response.json()['positives'])
